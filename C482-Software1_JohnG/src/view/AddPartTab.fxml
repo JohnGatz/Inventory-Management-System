@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddPartTabController">
+    <children>
+        <GridPane layoutY="1.0" prefHeight="421.6" prefWidth="850.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="135.59998168945313" minHeight="0.0" prefHeight="11.59998455047608" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="280.8" minHeight="10.0" prefHeight="269.2000154495239" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <Label layoutX="68.0" layoutY="20.0" prefHeight="46.0" prefWidth="90.0" text="Add Part">
+                            <font>
+                                <Font name="System Bold" size="17.0" />
+                            </font>
+                        </Label>
+                        <RadioButton fx:id="inHouseRadioButton" layoutX="178.0" layoutY="34.0" mnemonicParsing="false" onAction="#inHouseRadioButtonOnAction" selected="true" text="In-House">
+                            <toggleGroup>
+                                <ToggleGroup fx:id="AddPartToggleGroup" />
+                            </toggleGroup></RadioButton>
+                        <RadioButton fx:id="outsourcedRadioButton" layoutX="268.0" layoutY="34.0" mnemonicParsing="false" onAction="#outsourcedRadioButtonOnAction" text="Outsourced" toggleGroup="$AddPartToggleGroup" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                    <children>
+                        <Button layoutX="425.0" layoutY="27.0" mnemonicParsing="false" onAction="#onActionSave" text="Save" />
+                        <Button layoutX="479.0" layoutY="27.0" mnemonicParsing="false" onAction="#onActionCancel" text="Cancel" />
+                    </children>
+                </AnchorPane>
+                <GridPane GridPane.rowIndex="1">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="419.4000244140625" minWidth="10.0" prefWidth="368.20001220703125" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="481.79998779296875" minWidth="10.0" prefWidth="481.79998779296875" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                    <children>
+                        <GridPane>
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="111.20001220703125" minWidth="10.0" percentWidth="0.0" prefWidth="111.20001220703125" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.199951171875" minWidth="10.0" prefWidth="140.79998779296875" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <GridPane.margin>
+                                <Insets />
+                            </GridPane.margin>
+                            <padding>
+                                <Insets left="15.0" right="25.0" />
+                            </padding>
+                            <children>
+                                <Label text="ID">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="partIdTextField" disable="true" editable="false" text="Auto Gen- Disabled" GridPane.columnIndex="1">
+                                    <font>
+                                        <Font name="System Italic" size="12.0" />
+                                    </font></TextField>
+                            </children>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                        </GridPane>
+                        <GridPane GridPane.rowIndex="1">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="110.4000244140625" minWidth="10.0" percentWidth="0.0" prefWidth="110.4000244140625" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.20001220703125" minWidth="10.0" prefWidth="141.5999755859375" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <padding>
+                                <Insets left="15.0" right="25.0" />
+                            </padding>
+                            <children>
+                                <Label text="Name">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="partNameTextField" prefHeight="26.0" prefWidth="143.0" GridPane.columnIndex="1" />
+                            </children>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                        </GridPane>
+                        <GridPane GridPane.rowIndex="2">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="110.39996337890625" minWidth="10.0" percentWidth="0.0" prefWidth="110.39996337890625" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.20001220703125" minWidth="10.0" prefWidth="141.60003662109375" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <padding>
+                                <Insets left="15.0" right="25.0" />
+                            </padding>
+                            <children>
+                                <Label text="Inventory">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="partInventoryTextField" GridPane.columnIndex="1" />
+                            </children>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                        </GridPane>
+                        <GridPane GridPane.rowIndex="3">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="111.20001220703125" minWidth="10.0" percentWidth="0.0" prefWidth="109.5999755859375" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.20001220703125" minWidth="10.0" prefWidth="142.4000244140625" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <padding>
+                                <Insets left="15.0" right="25.0" />
+                            </padding>
+                            <children>
+                                <Label text="Price/Cost">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="partPriceTextField" GridPane.columnIndex="1" />
+                            </children>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                        </GridPane>
+                        <GridPane GridPane.rowIndex="4">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="109.5999755859375" minWidth="10.0" percentWidth="0.0" prefWidth="109.5999755859375" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.20001220703125" minWidth="10.0" prefWidth="142.4000244140625" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <padding>
+                                <Insets left="15.0" right="25.0" />
+                            </padding>
+                            <children>
+                                <Label text="Max">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="partMaxTextField" GridPane.columnIndex="1" />
+                            </children>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                        </GridPane>
+                        <GridPane GridPane.rowIndex="5">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="107.20001220703125" minWidth="10.0" percentWidth="0.0" prefWidth="107.20001220703125" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.199951171875" minWidth="10.0" prefWidth="144.79998779296875" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <padding>
+                                <Insets left="15.0" right="25.0" />
+                            </padding>
+                            <children>
+                                <Label fx:id="MachineidAndCompanyNameLabel" text="Machine ID">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="MachineidAndCompanyNameTextField" GridPane.columnIndex="1" />
+                            </children>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                        </GridPane>
+                        <GridPane GridPane.columnIndex="1" GridPane.rowIndex="4">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="0.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <padding>
+                                <Insets left="20.0" right="125.0" />
+                            </padding>
+                            <children>
+                                <Label text="Min">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="partMinTextField" prefWidth="164.0" GridPane.columnIndex="1" />
+                            </children>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                        </GridPane>
+                    </children>
+                    <padding>
+                        <Insets left="50.0" right="100.0" />
+                    </padding>
+                </GridPane>
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>
